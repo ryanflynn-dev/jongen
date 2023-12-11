@@ -18,7 +18,15 @@ const auxVerbs = [
     "would",
     "wouldnt"
 ];
-const generator = new Generator(auxVerbs);
+
+const people = [
+    "jon",
+    "p-dawg",
+    "bry",
+    "geesus"
+];
+
+const generator = new Generator(people, auxVerbs);
 document.getElementById('generate').addEventListener('click', async () => {
     const newName = await generator.generate();
     document.getElementById('name').textContent = newName;
